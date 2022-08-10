@@ -7,7 +7,7 @@ class Language
 public:
     Language();
     enum CodeLanguage {ru, en};
-    bool setLang(CodeLanguage cl, QTranslator &qtr);
+    bool setLang(CodeLanguage cl, QTranslator *qtr);
 
 };
 

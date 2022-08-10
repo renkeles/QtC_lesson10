@@ -314,7 +314,7 @@ void MainWindow::setLanguage(Language::CodeLanguage codeLanguage)
     }
     */
 
-    lang.setLang(codeLanguage, qtranslator);
+    lang.setLang(codeLanguage, &qtranslator);
     qApp->installTranslator(&qtranslator);
     btnCh->setLanguage(codeLanguage);
     aboutPr->setLanguage(codeLanguage);
