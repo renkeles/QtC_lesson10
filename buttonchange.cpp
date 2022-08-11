@@ -54,15 +54,7 @@ void buttonChange::setDefaultLanguage()
 
 void buttonChange::setLanguage(Language::CodeLanguage code)
 {
-    if(Language::CodeLanguage::en == code)
-    {
-        qtranslator.load(":/language/qm/QtLanguage_en.qm");
-        qApp->installTranslator(&qtranslator);
-        ui->retranslateUi(this);
-    }else
-    {
-        qtranslator.load(":/language/qm/QtLanguage_ru.qm");
-        qApp->installTranslator(&qtranslator);
-        ui->retranslateUi(this);
-    }
+    lang.setLang(code, &qtranslator);
+    qApp->installTranslator(&qtranslator);
+    ui->retranslateUi(this);
 }

@@ -25,6 +25,7 @@ public:
 private:
     Ui::buttonChange *ui;
     QTranslator qtranslator;
+    Language lang;
     void setDefaultLanguage();
 
 };

@@ -23,6 +23,7 @@ private:
     Ui::aboutProgram *ui;
     QTranslator qtranslator;
     void setDefaultLanguage();
+    Language lang;
 };
 
 #endif // ABOUTPROGRAM_H

@@ -94,11 +94,11 @@ private:
 
     int counter;
 
-    void setDefaultLanguage();
+    bool setDefaultLanguage(Language);
     Language lang;
 
     void setStyle(Style::StyleName stlName);
-    void setLanguage(Language::CodeLanguage codeLanguage);
+    void setLanguage(Language::CodeLanguage);
     void openFile(ReadOnlyType, QFile &file, QString);
     void setAlign(Qt::Alignment align);
     void initDateTime();

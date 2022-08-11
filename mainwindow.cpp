@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     MainWindow::setStyle(Style::StyleName::light);
 
-    setDefaultLanguage();
+    setDefaultLanguage(lang);
     MainWindow::on_russian_triggered();
 
     model = new QFileSystemModel;
@@ -264,7 +264,7 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
     }
 }
 
-void MainWindow::setDefaultLanguage()
+bool MainWindow::setDefaultLanguage(Language lang_)
 {
     this->setWindowTitle(tr("Блокнот"));
 
@@ -300,6 +300,17 @@ void MainWindow::setDefaultLanguage()
 
     ui->faq->setTitle(tr("Справка"));
         ui->aboutProgram->setText(tr("О программе"));
+
+        if(lang == lang_)
+        {
+            return false;
+        }else
+        {
+            MainWindow::setLanguage(lang_.getLang());
+            return true;
+        }
+
+
 }
 
 void MainWindow::setLanguage(Language::CodeLanguage codeLanguage)
